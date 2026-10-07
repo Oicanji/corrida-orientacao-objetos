@@ -1,0 +1,7 @@
+.godot/
+/android/
+__pycache__/
+_py4godot_download.zip
+/export/
+export/
+addons/py4godot/__pycache__/

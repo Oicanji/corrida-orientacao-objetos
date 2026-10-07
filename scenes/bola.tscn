@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://_motor/bola.gd" id="1_bola"]
+[ext_resource type="Texture2D" path="res://assets/Images/Car/Wheel.png" id="2_roda"]
+
+[sub_resource type="CircleShape2D" id="Circle_bola"]
+radius = 32.0
+
+[node name="Bola" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 7
+mass = 0.8
+can_sleep = false
+script = ExtResource("1_bola")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_roda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("Circle_bola")

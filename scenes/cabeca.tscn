@@ -1,0 +1,24 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://_motor/cabeca.gd" id="1_cabeca"]
+
+[sub_resource type="CircleShape2D" id="Circle_cabeca"]
+radius = 26.0
+
+[node name="Cabeca" type="Node2D"]
+z_index = 4
+script = ExtResource("1_cabeca")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+centered = true
+offset = Vector2(0, 46)
+
+[node name="Sensor" type="Area2D" parent="."]
+position = Vector2(0, -30)
+collision_layer = 0
+collision_mask = 1
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sensor"]
+shape = SubResource("Circle_cabeca")

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cfxmatneve001"]
+
+[ext_resource type="Shader" path="res://shaders/waving_particles.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/dimensions = Vector2(1280, 720)
+shader_parameter/vertical_scroll = 0.5

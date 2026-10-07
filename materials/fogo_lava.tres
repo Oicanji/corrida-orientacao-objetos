@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cfxmatfogo001"]
+
+[ext_resource type="Shader" path="res://shaders/cartoon_3d_fire.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/apply_shape_deform = true
+shader_parameter/cylinder_height = 1.2
+shader_parameter/flame_height = 1.0
+shader_parameter/_speed = 2.4

@@ -1,0 +1,139 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://_motor/editor_classe.gd" id="1_editor"]
+
+[node name="Editor" type="CanvasLayer"]
+layer = 30
+process_mode = 3
+script = ExtResource("1_editor")
+
+[node name="Fundo" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0.118, 0.118, 0.118, 1)
+
+[node name="Barra" type="ColorRect" parent="."]
+anchor_right = 1.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.176, 0.176, 0.188, 1)
+
+[node name="Faixa" type="ColorRect" parent="."]
+anchor_right = 1.0
+offset_top = 37.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0, 0.478, 0.8, 1)
+
+[node name="Titulo" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 6.0
+offset_right = 416.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.86, 0.86, 0.86, 1)
+theme_override_font_sizes/font_size = 16
+text = "carro.py"
+
+[node name="Codigo" type="CodeEdit" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 40.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/background_color = Color(0.118, 0.118, 0.118, 1)
+theme_override_colors/font_color = Color(0.83, 0.83, 0.83, 1)
+theme_override_colors/caret_color = Color(0.86, 0.86, 0.86, 1)
+theme_override_colors/current_line_color = Color(0.16, 0.16, 0.16, 1)
+theme_override_colors/line_number_color = Color(0.52, 0.52, 0.52, 1)
+theme_override_colors/selection_color = Color(0.16, 0.28, 0.42, 1)
+theme_override_font_sizes/font_size = 18
+draw_line_numbers = true
+focus_mode = 2
+
+[node name="Jogar" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -92.0
+offset_right = 184.0
+offset_bottom = -52.0
+theme_override_font_sizes/font_size = 18
+text = "Jogar"
+
+[node name="Resetar" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = -92.0
+offset_right = 400.0
+offset_bottom = -52.0
+theme_override_font_sizes/font_size = 18
+text = "Resetar classe"
+
+[node name="Upload" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 416.0
+offset_top = -92.0
+offset_right = 596.0
+offset_bottom = -52.0
+theme_override_font_sizes/font_size = 18
+text = "Enviar imagem"
+
+[node name="FundoPreview" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 612.0
+offset_top = -92.0
+offset_right = 652.0
+offset_bottom = -52.0
+mouse_filter = 2
+color = Color(0.08, 0.08, 0.08, 1)
+
+[node name="Preview" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 612.0
+offset_top = -92.0
+offset_right = 652.0
+offset_bottom = -52.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Dica" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 660.0
+offset_top = -86.0
+offset_right = 1240.0
+offset_bottom = -58.0
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 14
+text = "use em motorista = \"arquivo.png\""
+
+[node name="Erro" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -44.0
+offset_right = -24.0
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0.94, 0.28, 0.28, 1)
+theme_override_font_sizes/font_size = 15
+text = ""
+
+[node name="Dialogo" type="FileDialog" parent="."]
+title = "Enviar imagem do motorista"
+ok_button_text = "Enviar"
+size = Vector2i(900, 600)
+unresizable = false
+access = 2
+file_mode = 0
+use_native_dialog = false

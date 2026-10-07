@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cfxmatceu0001"]
+
+[ext_resource type="Shader" path="res://shaders/day_night_sky.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/hour = 10.0
+shader_parameter/horizon_y = 0.62
